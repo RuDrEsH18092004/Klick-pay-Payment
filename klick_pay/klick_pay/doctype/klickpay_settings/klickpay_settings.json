@@ -1,0 +1,287 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-03 15:17:10.594782",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "api_configuration_section",
+  "api_base_url",
+  "merchant_token",
+  "api_version",
+  "request_timeout",
+  "enable_integration",
+  "webhook_configuration_section",
+  "webhook_url",
+  "webhook_secret",
+  "enable_webhooks",
+  "verify_webhook_signature",
+  "webhook_timestamp_tolerance",
+  "payment_configuration_section",
+  "payment_request_mode",
+  "default_payment_link_expiry",
+  "allowed_payment_methods",
+  "create_payment_request",
+  "accounting_configuration_section",
+  "klickpay_clearing_account",
+  "company",
+  "default_receivable_account",
+  "default_income_account",
+  "refund_configuration_section",
+  "enable_refunds",
+  "enable_partial_refunds",
+  "refund_api_timeout",
+  "refund_processing_enabled",
+  "payment_status_configuration_section",
+  "update_sales_invoice_status",
+  "auto_submit_sales_invoice",
+  "partial_payment_status",
+  "successful_payment_status",
+  "developer__debug_configuration_section",
+  "enable_debug_logging",
+  "log_api_requests",
+  "log_api_responses",
+  "log_webhook_payloads"
+ ],
+ "fields": [
+  {
+   "fieldname": "api_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "API Configuration"
+  },
+  {
+   "fieldname": "api_base_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API Base URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "merchant_token",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Merchant Token",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_version",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API Version",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_timeout",
+   "fieldtype": "Int",
+   "label": "Request Timeout"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_integration",
+   "fieldtype": "Check",
+   "label": "Enable Integration"
+  },
+  {
+   "fieldname": "webhook_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Webhook Configuration"
+  },
+  {
+   "fieldname": "webhook_url",
+   "fieldtype": "Data",
+   "label": "Webhook URL"
+  },
+  {
+   "fieldname": "webhook_secret",
+   "fieldtype": "Password",
+   "label": "Webhook Secret"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_webhooks",
+   "fieldtype": "Check",
+   "label": "Enable Webhooks"
+  },
+  {
+   "default": "0",
+   "fieldname": "verify_webhook_signature",
+   "fieldtype": "Check",
+   "label": "Verify Webhook Signature"
+  },
+  {
+   "fieldname": "webhook_timestamp_tolerance",
+   "fieldtype": "Int",
+   "label": "Webhook Timestamp Tolerance"
+  },
+  {
+   "fieldname": "payment_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Configuration"
+  },
+  {
+   "fieldname": "payment_request_mode",
+   "fieldtype": "Select",
+   "label": "Payment Request Mode",
+   "options": "ERPNext Payment Request"
+  },
+  {
+   "fieldname": "default_payment_link_expiry",
+   "fieldtype": "Int",
+   "label": "Default Payment Link Expiry"
+  },
+  {
+   "fieldname": "allowed_payment_methods",
+   "fieldtype": "Table",
+   "label": "Allowed Payment Methods",
+   "options": "KlickPay Payment Method"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_payment_request",
+   "fieldtype": "Check",
+   "label": "Create Payment Request"
+  },
+  {
+   "fieldname": "accounting_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Configuration"
+  },
+  {
+   "fieldname": "klickpay_clearing_account",
+   "fieldtype": "Link",
+   "label": "KlickPay Clearing Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "default_receivable_account",
+   "fieldtype": "Link",
+   "label": "Default Receivable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_income_account",
+   "fieldtype": "Link",
+   "label": "Default Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "refund_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Refund Configuration"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_refunds",
+   "fieldtype": "Check",
+   "label": "Enable Refunds"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_partial_refunds",
+   "fieldtype": "Check",
+   "label": "Enable Partial Refunds"
+  },
+  {
+   "fieldname": "refund_api_timeout",
+   "fieldtype": "Int",
+   "label": "Refund API Timeout"
+  },
+  {
+   "default": "0",
+   "fieldname": "refund_processing_enabled",
+   "fieldtype": "Check",
+   "label": "Refund Processing Enabled"
+  },
+  {
+   "fieldname": "payment_status_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Status Configuration"
+  },
+  {
+   "default": "0",
+   "fieldname": "update_sales_invoice_status",
+   "fieldtype": "Check",
+   "label": "Update Sales Invoice Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_submit_sales_invoice",
+   "fieldtype": "Check",
+   "label": "Auto Submit Sales Invoice"
+  },
+  {
+   "fieldname": "partial_payment_status",
+   "fieldtype": "Select",
+   "label": "Partial Payment Status",
+   "options": "Pending\nPartially Paid\nFully Paid"
+  },
+  {
+   "fieldname": "successful_payment_status",
+   "fieldtype": "Select",
+   "label": "Successful Payment Status",
+   "options": "Paid\nCompleted\nCaptured\nSuccess"
+  },
+  {
+   "fieldname": "developer__debug_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Developer / Debug Configuration"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_debug_logging",
+   "fieldtype": "Check",
+   "label": "Enable Debug Logging"
+  },
+  {
+   "default": "0",
+   "fieldname": "log_api_requests",
+   "fieldtype": "Check",
+   "label": "Log API Requests"
+  },
+  {
+   "default": "0",
+   "fieldname": "log_api_responses",
+   "fieldtype": "Check",
+   "label": "Log API Responses"
+  },
+  {
+   "default": "0",
+   "fieldname": "log_webhook_payloads",
+   "fieldtype": "Check",
+   "label": "Log Webhook Payloads"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-09-03 15:45:11.340463",
+ "modified_by": "Administrator",
+ "module": "Klick-pay",
+ "name": "KlickPay Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
