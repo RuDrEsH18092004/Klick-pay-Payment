@@ -1,0 +1,399 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "KPR-REF-{####}",
+ "creation": "2026-09-18 17:04:03.647137",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "refund_information_section",
+  "refund_id",
+  "refund_status",
+  "refund_type",
+  "column_break_rcwp",
+  "refund_reason",
+  "erpnext_reference_section",
+  "sales_invoice",
+  "payment_entry",
+  "klickpay_transaction",
+  "column_break_gfwd",
+  "customer",
+  "company",
+  "original_payment_section",
+  "klickpay_payment_id",
+  "client_reference",
+  "currency",
+  "original_fee_to_collect",
+  "total_amount_to_deduct",
+  "column_break_yfwr",
+  "original_payment_amount",
+  "original_payment_method",
+  "refund_amount",
+  "refund_fee",
+  "klickpay_refund_information_section",
+  "refund_reference",
+  "gateway_refund_id",
+  "gateway_code",
+  "column_break_tdaf",
+  "gateway_reference",
+  "gateway_result",
+  "gateway_message",
+  "processing_information_section",
+  "requested_at",
+  "processed_at",
+  "column_break_ocbh",
+  "last_status_update",
+  "retry_count",
+  "refund_webhook_section",
+  "webhook_event",
+  "webhook_verified",
+  "column_break_kkuf",
+  "webhook_received_at",
+  "webhook_log",
+  "accounting_section",
+  "refund_payment_entry",
+  "accounting_status",
+  "accounting_error",
+  "api_information_section",
+  "refund_request",
+  "refund_response"
+ ],
+ "fields": [
+  {
+   "fieldname": "refund_information_section",
+   "fieldtype": "Section Break",
+   "label": "Refund Information"
+  },
+  {
+   "fieldname": "refund_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Refund ID",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "refund_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Refund Status",
+   "options": "Requested\nProcessing\nSuccess\nFailed\nPending Collection\nUnder Review\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "refund_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Refund Type",
+   "options": "Full\nPartial",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rcwp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "refund_reason",
+   "fieldtype": "Small Text",
+   "label": "Refund Reason"
+  },
+  {
+   "fieldname": "erpnext_reference_section",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Reference"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "klickpay_transaction",
+   "fieldtype": "Link",
+   "label": "KlickPay Transaction",
+   "options": "KlickPay Transaction",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gfwd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "original_payment_section",
+   "fieldtype": "Section Break",
+   "label": "Original Payment"
+  },
+  {
+   "fieldname": "klickpay_payment_id",
+   "fieldtype": "Date",
+   "label": "KlickPay Payment ID",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_reference",
+   "fieldtype": "Data",
+   "label": "Client Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "original_fee_to_collect",
+   "fieldtype": "Currency",
+   "label": "Original Fee To Collect",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount_to_deduct",
+   "fieldtype": "Currency",
+   "label": "Total Amount To Deduct",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_yfwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "original_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Original Payment Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "original_payment_method",
+   "fieldtype": "Data",
+   "label": "Original Payment Method",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refund_amount",
+   "fieldtype": "Currency",
+   "label": "Refund Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refund_fee",
+   "fieldtype": "Currency",
+   "label": "Refund Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "klickpay_refund_information_section",
+   "fieldtype": "Section Break",
+   "label": "KlickPay Refund Information"
+  },
+  {
+   "fieldname": "refund_reference",
+   "fieldtype": "Data",
+   "label": "Refund Reference",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "gateway_refund_id",
+   "fieldtype": "Data",
+   "label": "Gateway Refund ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gateway_code",
+   "fieldtype": "Data",
+   "label": "Gateway Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_tdaf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gateway_reference",
+   "fieldtype": "Data",
+   "label": "Gateway Reference"
+  },
+  {
+   "fieldname": "gateway_result",
+   "fieldtype": "Data",
+   "label": "Gateway Result",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gateway_message",
+   "fieldtype": "Small Text",
+   "label": "Gateway Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processing_information_section",
+   "fieldtype": "Section Break",
+   "label": "Processing Information"
+  },
+  {
+   "fieldname": "requested_at",
+   "fieldtype": "Datetime",
+   "label": "Requested At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processed_at",
+   "fieldtype": "Datetime",
+   "label": "Processed At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ocbh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_status_update",
+   "fieldtype": "Datetime",
+   "label": "Last Status Update",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "retry_count",
+   "fieldtype": "Int",
+   "label": "Retry Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refund_webhook_section",
+   "fieldtype": "Section Break",
+   "label": "Refund Webhook"
+  },
+  {
+   "fieldname": "webhook_event",
+   "fieldtype": "Select",
+   "label": "Webhook Event",
+   "options": "refund.success\nrefund.failed\nrefund.pending_balance\nrefund.under_review"
+  },
+  {
+   "default": "0",
+   "fieldname": "webhook_verified",
+   "fieldtype": "Check",
+   "label": "Webhook Verified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kkuf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "webhook_received_at",
+   "fieldtype": "Datetime",
+   "label": "Webhook Received At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "webhook_log",
+   "fieldtype": "Link",
+   "label": "Webhook Log",
+   "options": "KlickPay Webhook Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounting_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "refund_payment_entry",
+   "fieldtype": "Link",
+   "label": "Refund Payment Entry",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounting_status",
+   "fieldtype": "Select",
+   "label": "Accounting Status",
+   "options": "Not Processed\nPending\nProcessed\nFailed"
+  },
+  {
+   "fieldname": "accounting_error",
+   "fieldtype": "Small Text",
+   "label": "Accounting Error",
+   "read_only": 1
+  },
+  {
+   "fieldname": "api_information_section",
+   "fieldtype": "Section Break",
+   "label": "API Information"
+  },
+  {
+   "fieldname": "refund_request",
+   "fieldtype": "Code",
+   "label": "Refund Request",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refund_response",
+   "fieldtype": "Code",
+   "label": "Refund Response",
+   "options": "JSON",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-19 12:39:38.153351",
+ "modified_by": "Administrator",
+ "module": "Klick-pay",
+ "name": "KlickPay Refund",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

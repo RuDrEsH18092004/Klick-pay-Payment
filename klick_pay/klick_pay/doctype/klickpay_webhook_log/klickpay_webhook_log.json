@@ -1,0 +1,306 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "KPL-WEB-{####}",
+ "creation": "2026-09-18 16:18:29.639858",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "webhook_event_section",
+  "event_type",
+  "payment_id",
+  "klickpay_invoice_id",
+  "invoice_token",
+  "client_reference",
+  "gateway_information_section",
+  "track_id",
+  "reference_id",
+  "transaction_id",
+  "authorization_code",
+  "column_break_ajrh",
+  "gateway_result",
+  "payment_method",
+  "amount",
+  "currency",
+  "webhook_security_section",
+  "verification_status",
+  "timestamp_valid",
+  "signature_valid",
+  "column_break_gsus",
+  "webhook_signature",
+  "timestamp",
+  "section_break_mieo",
+  "idempotency_key",
+  "processing_status",
+  "processed_at",
+  "erpnext_reference_section",
+  "klickpay_transaction",
+  "sales_invoice",
+  "payment_request",
+  "payment_entry",
+  "raw_payload_section",
+  "raw_payload",
+  "processing_information_section",
+  "column_break_hkhe",
+  "processing_error",
+  "retry_count",
+  "last_retry_at",
+  "received_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "webhook_event_section",
+   "fieldtype": "Section Break",
+   "label": "Webhook Event"
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Event Type",
+   "options": "payment.success\npayment.declined\npayment.failed\npayment.voided\nrefund.success\nrefund.failed\nrefund.pending_balance\nrefund.under_review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_id",
+   "fieldtype": "Data",
+   "label": "Payment ID"
+  },
+  {
+   "fieldname": "klickpay_invoice_id",
+   "fieldtype": "Data",
+   "label": "KlickPay Invoice ID"
+  },
+  {
+   "fieldname": "invoice_token",
+   "fieldtype": "Data",
+   "label": "Invoice Token"
+  },
+  {
+   "fieldname": "client_reference",
+   "fieldtype": "Data",
+   "label": "Client Reference"
+  },
+  {
+   "fieldname": "gateway_information_section",
+   "fieldtype": "Section Break",
+   "label": "Gateway Information"
+  },
+  {
+   "fieldname": "track_id",
+   "fieldtype": "Data",
+   "label": "Track ID"
+  },
+  {
+   "fieldname": "reference_id",
+   "fieldtype": "Data",
+   "label": "Reference ID"
+  },
+  {
+   "fieldname": "transaction_id",
+   "fieldtype": "Data",
+   "label": "Transaction ID"
+  },
+  {
+   "fieldname": "authorization_code",
+   "fieldtype": "Data",
+   "label": "Authorization Code"
+  },
+  {
+   "fieldname": "column_break_ajrh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gateway_result",
+   "fieldtype": "Data",
+   "label": "Gateway Result"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Data",
+   "label": "Payment Method"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "webhook_security_section",
+   "fieldtype": "Section Break",
+   "label": "Webhook Security"
+  },
+  {
+   "fieldname": "webhook_signature",
+   "fieldtype": "Data",
+   "label": "Webhook Signature"
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Data",
+   "label": "Timestamp"
+  },
+  {
+   "default": "0",
+   "fieldname": "signature_valid",
+   "fieldtype": "Check",
+   "label": "Signature Valid",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "timestamp_valid",
+   "fieldtype": "Check",
+   "label": "Timestamp Valid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gsus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "Pending\nVerified\nInvalid Signature\nExpired Timestamp\nInvalid Request"
+  },
+  {
+   "fieldname": "section_break_mieo",
+   "fieldtype": "Section Break",
+   "label": "Idempotency"
+  },
+  {
+   "fieldname": "idempotency_key",
+   "fieldtype": "Data",
+   "label": "Idempotency Key",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "processing_status",
+   "fieldtype": "Select",
+   "label": "Processing Status",
+   "options": "Received\nVerified\nQueued\nProcessing\nProcessed\nIgnored\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "processed_at",
+   "fieldtype": "Datetime",
+   "label": "Processed At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "erpnext_reference_section",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Reference"
+  },
+  {
+   "fieldname": "klickpay_transaction",
+   "fieldtype": "Link",
+   "label": "KlickPay Transaction",
+   "options": "KlickPay Transaction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_request",
+   "fieldtype": "Link",
+   "label": "Payment Request",
+   "options": "Payment Request",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "raw_payload_section",
+   "fieldtype": "Section Break",
+   "label": "Raw Payload"
+  },
+  {
+   "fieldname": "raw_payload",
+   "fieldtype": "Code",
+   "label": "Raw Payload",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processing_information_section",
+   "fieldtype": "Section Break",
+   "label": "Processing Information",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hkhe",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processing_error",
+   "fieldtype": "Small Text",
+   "label": "Processing Error"
+  },
+  {
+   "fieldname": "retry_count",
+   "fieldtype": "Int",
+   "label": "Retry Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_retry_at",
+   "fieldtype": "Datetime",
+   "label": "Last Retry At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "received_at",
+   "fieldtype": "Datetime",
+   "label": "Received At",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-18 16:58:32.491737",
+ "modified_by": "Administrator",
+ "module": "Klick-pay",
+ "name": "KlickPay Webhook Log",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
